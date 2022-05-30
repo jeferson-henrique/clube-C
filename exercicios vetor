@@ -1,0 +1,26 @@
+int main()
+{
+    int v1, v2, s1, s2, soma;
+    
+    printf("indique o primeiro vetor:");
+    scanf("%d",&v1);
+    printf("\ninforme o sentido do vetor:");
+    printf("\n-1 para esquerda-direita");
+    printf("\n1 para direita-esquerda");
+    scanf("%d",&s1);
+    
+    printf("indique o segundo vetor:");
+    scanf("%d",&v1);
+    printf("\ninforme o sentido do vetor:");
+    printf("\n-1 para esquerda-direita");
+    printf("\n1 para direita-esquerda");
+    scanf("%d",&s2);
+    
+    soma = v1*s1 + v2*s2;
+
+    printf("\no valor da soma vetorial é: %d",soma);
+
+    return 0;
+    
+}
+    
