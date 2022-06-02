@@ -1,0 +1,12 @@
+int main()
+{
+    int a;
+
+    printf("insira seu valor");
+    scanf("%d",&a);
+
+  if (a % 2 == 0){printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%d e par\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", a);}
+    else{printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%d e impar\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", a);}
+
+    return 0;
+}
