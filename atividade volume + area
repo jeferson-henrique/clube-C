@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+
+int altura, comprimento, area, largura, volume;
+
+printf ("insira a altura");
+scanf ("%d", &altura);
+printf ("\n insira o comprimento");
+scanf ("%d", &comprimento);
+printf ("\n insira a largura");
+scanf ("%d", &largura);
+
+area = altura*comprimento;
+
+volume = altura*comprimento*largura;
+
+printf ("\n a area do seu objeto é %d\n", area);
+
+printf ("\n o volume do seu objeto é %d\n", volume);
+
+return 0;
+
+}
