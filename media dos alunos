@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main(){
+
+float junin1, junin2, lulu1, lulu2, dede1, dede2, m1, m2, m3, s1, s2, s3;
+
+printf("insira a primeira nota do primeiro aluno\n");
+scanf("%f", &junin1);
+printf("insira a segunda nota do primeiro aluno\n");
+scanf("%f", &junin2);
+
+printf("insira a primeira nota do segundo aluno\n");
+scanf("%f", &lulu1);
+printf("insira a segunda nota do segundo aluno\n");
+scanf("%f", &lulu2);
+
+printf("insira a primeira nota do terceiro aluno\n");
+scanf("%f", &dede1);
+printf("insira a segunda nota do terceiro aluno\n");
+scanf("%f", &dede2);
+
+s1 = junin1+junin2;
+s2 = lulu1+lulu2;
+s3 = dede1+dede2;
+
+m1 = s1/2;
+m2 = s2/2;
+m3 = s3/2;
+
+
+ if (m1 > m2 && m1 > m3 && m2 > m3)
+    {
+        printf("\n1º lugar = pimeiro aluno com média %.2f", m1);
+        printf("\n2º lugar = segundo aluno com média %.2f", m2);
+        printf("\n3º lugar = terceiro aluno com média %.2f\n", m3);
+    }
+    else if (m1 > m2 && m1 > m3 && m3 > m2)
+    {
+        printf("\n1º lugar = pimeiro aluno com média %.2f", m1);
+        printf("\n2º lugar = terceiro aluno com média %.2f\n", m3);
+        printf("\n3º lugar = segundo aluno com média %.2f", m2);
+    }
+    else if (m2 > m1 && m2 > m3 && m1 > m3)
+    {
+        printf("\n1º lugar = segundo aluno com média %.2f", m2);
+        printf("\n2º lugar = pimeiro aluno com média %.2f", m1);
+        printf("\n3º lugar = terceiro aluno com média %.2f\n", m3);
+    }
+    else if (m2 > m1 && m2 > m3 && m3 > m1)
+    {
+        printf("\n1º lugar = segundo aluno com média %.2f", m2);
+        printf("\n2º lugar = terceiro aluno com média %.2f\n", m3);
+        printf("\n3º lugar = pimeiro aluno com média %.2f", m1);
+    }
+    else if (m3 > m1 && m3 > m2 && m1 > m2)
+    {
+        printf("\n1º lugar = terceiro aluno com média %.2f\n", m3);
+        printf("\n2º lugar = pimeiro aluno com média %.2f", m1);
+        printf("\n3º lugar = segundo aluno com média %.2f", m2);
+    }
+    else if (m3 > m1 && m3 > m2 && m2 > m1)
+    {
+        printf("\n1º lugar = terceiro aluno com média %.2f\n", m3);
+        printf("\n2º lugar = segundo aluno com média %.2f", m2);
+        printf("\n3º lugar = pimeiro aluno com média %.2f", m1);
+    }
+    else
+    {
+        printf("\nOcorreu algum erro");
+    }
+
+
+
+
+}
