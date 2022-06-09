@@ -1,37 +1,41 @@
-
+#include <stdio.h>
+#include <math.h>
 int main()
 {
-    int primeiro, segundo, soma, quadrado, quadradop, produto, raizq, somaq;
-    
-    printf("digite o primeiro numero:");
-    scanf("%i",&primeiro);
-    
-    printf("digite o segundo numero:");
-    scanf("%i",&segundo);
-    
-    soma      = primeiro + segundo;
-    
-    quadrado  = segundo * segundo;
-    
-    produto   = quadrado * primeiro;
-    
-    quadradop = primeiro * primeiro;
-    
-    somaq     = quadrado + quadradop;
-    
-    raizq     = sqrt(somaq);
-    
-    
-    printf("A soma é %i\n", soma);
-    printf("O produto do primeiro pelo quadrado do segundo é %i\n", produto);
-    printf("O quadrado do primeiro numero é %i\n", soma);
-    printf("A raiz quadrada da soma entre os numeros é %i\n", raizq);
-    printf("Eu nao sei calcular o seno \n");
-    printf("O modulo do primeiro numero é %i\n", primeiro);
+    float primeiro, segundo, soma, quadrado, quadradop, produto, raizq, somaq, diferenca, seno;
 
-    
-    
-    
+    printf("digite o primeiro numero:");
+    scanf("%f",&primeiro);
+
+    printf("digite o segundo numero:");
+    scanf("%f",&segundo);
+
+    soma      = primeiro + segundo;
+
+    quadrado  = segundo * segundo;
+
+    produto   = quadrado * primeiro;
+
+    quadradop = primeiro * primeiro;
+
+    somaq     = quadrado + quadradop;
+
+    raizq     = sqrt(somaq);
+
+    diferenca = primeiro - segundo;;
+
+    seno      = sin (diferenca);
+
+    printf("A soma é %.2f\n", soma);
+    printf("O produto do primeiro pelo quadrado do segundo é %.2f\n", produto);
+    printf("O quadrado do primeiro numero é %.2f\n", soma);
+    printf("A raiz quadrada da soma entre os numeros é %.2f\n", raizq);
+    printf("O seno da diferenca entre os numeros é %.2f\n", seno);
+    printf("O modulo do primeiro numero é %.2f\n", primeiro);
+
+
+
+
 
     return 0;
 }
