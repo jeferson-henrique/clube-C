@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+int a,b,c;
+
+printf("informe um valor:");
+scanf("%d",&a);
+
+printf("informe um valor:");
+scanf("%d",&b);
+
+printf("informe um valor:");
+scanf("%d",&c);
+
+if(a>b)
+{if(a>c){printf("%d é maior que %d e que %d", a, b, c);
+}}
+if(b>a)
+{if(b>c){printf("%d é maior que %d e que %d", b, a, c);
+}}
+if(c>a)
+{if(c>b){printf("%d é maior que %d e que %d", c, a, b);
+}}
+}
