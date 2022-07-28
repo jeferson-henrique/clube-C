@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+int a;
+
+printf("informe um valor:");
+scanf("%d",&a);
+
+if(a>=0){printf("é positivo");
+    
+}
+else{printf("é negativo");}
+
+}
