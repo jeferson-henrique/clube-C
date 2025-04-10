@@ -1,35 +1,23 @@
-# Função para calcular o tempo de atraso entre semáforos
-def calcular_tempo_atraso(distancia, velocidade):
-    # Converter velocidade de km/h para m/s (1 km/h = 1000 m / 3600 s = 5/18 m/s)
-    velocidade_ms = velocidade * (5 / 18)
-    
-    # Calcular o tempo (em segundos) = distância (em metros) / velocidade (em m/s)
-    tempo = distancia / velocidade_ms
-    return tempo
+import math
 
-# Função para simular a sincronização dos semáforos
-def sincronizar_semaforos(distancia, velocidade, num_semaforos):
-    print(f"Velocidade permitida: {velocidade} km/h")
-    print(f"Distância entre semáforos: {distancia} metros")
-    print(f"Número de semáforos: {num_semaforos}")
-    print("\nSincronização dos semáforos:")
+def calcular_tempo_semaforo(distancia, velocidade_permitida, aceleracao):
+    tempo_aceleracao = velocidade_permitida / aceleracao
+    distancia_aceleracao = 0.5 * aceleracao * (tempo_aceleracao ** 2)
     
-    # O primeiro semáforo abre no tempo 0
-    tempo_atual = 0
-    print(f"Semáforo 1 abre no tempo: {tempo_atual:.2f} segundos")
+    if distancia_aceleracao >= distancia:
+        tempo_total = math.sqrt((2 * distancia) / aceleracao)
+    else:
+        distancia_constante = distancia - distancia_aceleracao
+        tempo_constante = distancia_constante / velocidade_permitida
+        tempo_total = tempo_aceleracao + tempo_constante
     
-    # Calcular o tempo de atraso entre semáforos
-    tempo_entre_semaforos = calcular_tempo_atraso(distancia, velocidade)
-    
-    # Simular a abertura dos próximos semáforos
-    for i in range(2, num_semaforos + 1):
-        tempo_atual += tempo_entre_semaforos
-        print(f"Semáforo {i} abre no tempo: {tempo_atual:.2f} segundos")
+    tempo_semaforo = tempo_total - 3
+    return max(0, tempo_semaforo)
 
-# Exemplo de uso
-distancia = 50  # Distância entre semáforos em metros
-velocidade = 60  # Velocidade permitida em km/h
-num_semaforos = 4  # Número de semáforos na sequência
+distancia = 500
+velocidade_permitida_kmh = 50
+aceleracao = 2
 
-# Chamar a função para sincronizar os semáforos
-sincronizar_semaforos(distancia, velocidade, num_semaforos)
+velocidade_permitida = velocidade_permitida_kmh / 3.6
+tempo = calcular_tempo_semaforo(distancia, velocidade_permitida, aceleracao)
+print(f"O semáforo deve abrir {tempo:.2f} segundos após o semáforo anterior")
