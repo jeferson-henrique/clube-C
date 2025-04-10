@@ -14,9 +14,9 @@ def calcular_tempo_semaforo(distancia, velocidade_permitida, aceleracao):
     tempo_semaforo = tempo_total - 3
     return max(0, tempo_semaforo)
 
-distancia = 500
-velocidade_permitida_kmh = 50
-aceleracao = 2
+distancia = int(input("informe a distancia entre um semaforo e outro: "))
+velocidade_permitida_kmh = int(input("informe a velocidade maxima da via: "))
+aceleracao = int(input("informe a aceleraçao do veiculo: "))
 
 velocidade_permitida = velocidade_permitida_kmh / 3.6
 tempo = calcular_tempo_semaforo(distancia, velocidade_permitida, aceleracao)
