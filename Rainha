@@ -5,17 +5,13 @@ int main() {
     int x1, y1, x2, y2;
 
     std::cout << "--- Calculadora de Movimentos da Rainha ---" << std::endl;
-    std::cout << "Posicao inicial X (1-8): ";
-    std::cin >> x1;
-    std::cout << "Posicao inicial Y (1-8): ";
-    std::cin >> y1;
-    std::cout << "Posicao alvo X (1-8): ";
-    std::cin >> x2;
-    std::cout << "Posicao alvo Y (1-8): ";
-    std::cin >> y2;
+    std::cout << "Digite a posicao inicial da rainha (X Y): ";
+    std::cin >> x1 >> y1;
+    std::cout << "Digite a posicao alvo (X Y): ";
+    std::cin >> x2 >> y2;
 
     if (x1 < 1 || x1 > 8 || y1 < 1 || y1 > 8 || x2 < 1 || x2 > 8 || y2 < 1 || y2 > 8) {
-        std::cout << "\nCoordenadas invalidas! Use valores entre 1 e 8." << std::endl;
+        std::cout << "\nCoordenadas invalidas! Por favor, use valores entre 1 e 8." << std::endl;
         return 1;
     }
 
@@ -32,7 +28,9 @@ int main() {
     }
 
     std::cout << "\n--- Resultado ---" << std::endl;
-    std::cout << "Para ir de (" << x1 << ", " << y1 << ") para (" << x2 << ", " << y2 << "), a rainha leva **" << movimentos << " movimento(s)**." << std::endl;
+    std::cout << "Para a rainha ir de (" << x1 << ", " << y1
+              << ") para (" << x2 << ", " << y2 << "), leva **"
+              << movimentos << " movimento(s)**." << std::endl;
 
     return 0;
 }
